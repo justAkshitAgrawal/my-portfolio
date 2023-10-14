@@ -105,7 +105,7 @@ const Home = () => {
         .
       </p>
 
-      <div className="flex flex-col max-h-[50vh] md:max-h-[90vh] max-[380px]:max-h-[60vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
+      <div className="flex flex-col min-h-fit max-h-[60vh] md:max-h-[90vh] max-[380px]:max-h-[80vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
         {masonry.map((item) => {
           return (
             <SpotlightCard
