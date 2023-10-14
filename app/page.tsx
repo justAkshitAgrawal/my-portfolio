@@ -105,7 +105,7 @@ const Home = () => {
         .
       </p>
 
-      <div className="flex flex-col max-h-[50vh] md:max-h-[70vh] max-[380px]:max-h-[60vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
+      <div className="flex flex-col max-h-[50vh] md:max-h-[90vh] max-[380px]:max-h-[60vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
         {masonry.map((item) => {
           return (
             <SpotlightCard
@@ -146,8 +146,8 @@ const Home = () => {
       </div>
 
       <p className="mt-10 text-sm text-white/80 leading-7 md:text-base md:leading-8">
-        I create modern web applications using that are so beautiful that they
-        make you cry. I ship my apps using the following stack:
+        I create modern web applications that are so beautiful that they make
+        you cry. I ship my apps using the following stack:
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">

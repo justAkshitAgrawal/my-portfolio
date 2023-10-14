@@ -36,6 +36,7 @@ const GuestSign = ({ user }: GuestSignProps) => {
       return data;
     },
     onSuccess: () => {
+      setMessage("");
       router.refresh();
     },
     onError: () => {
