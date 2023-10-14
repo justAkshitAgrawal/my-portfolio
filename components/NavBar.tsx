@@ -30,8 +30,8 @@ export default function NavBar() {
   }
 
   return (
-    <div className="flex pt-14 md:pt-5 justify-start pl-6">
-      <Navigation as="nav" className="relative  rounded-2xl ">
+    <div className="flex pt-14 justify-start pl-6 md:pl-0">
+      <Navigation as="nav" className="relative rounded-2xl ">
         {({
           ready,
           size,
@@ -66,6 +66,7 @@ export default function NavBar() {
                   key={index}
                   as="li"
                   onActivated={navigate}
+                  active={pathname == item.href}
                   className=""
                 >
                   {({
@@ -76,7 +77,9 @@ export default function NavBar() {
                     isActive: boolean;
                   }) => (
                     <Link
-                      onClick={setActive}
+                      onClick={() => {
+                        setActive();
+                      }}
                       href={item.href}
                       className={clsx(
                         pathname == item.href

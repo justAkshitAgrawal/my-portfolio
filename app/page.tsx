@@ -10,11 +10,11 @@ import setup from "@/images/setup.jpg";
 import clsx from "clsx";
 import Image from "next/image";
 
+import SocialLink from "@/components/SocialLink";
+import Link from "next/link";
+import { BiLogoTypescript } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiPrisma, SiTailwindcss } from "react-icons/si";
-import { BiLogoTypescript } from "react-icons/bi";
-import Link from "next/link";
-import SocialLink from "@/components/SocialLink";
 
 const Home = () => {
   const masonry = [
@@ -55,7 +55,7 @@ const Home = () => {
     },
     {
       name: "Prisma",
-      icon: <SiPrisma className="h-5 w-5 text-green-600" />,
+      icon: <SiPrisma className="h-5 w-5 text-white" />,
     },
     {
       name: "Tailwind CSS",
@@ -76,12 +76,16 @@ const Home = () => {
       name: "star my repos",
       url: "https://github.com/justAkshitAgrawal",
     },
+    {
+      name: "send me an email",
+      url: "mailto:me@akshitagrawal.dev",
+    },
   ];
 
   return (
-    <div className="mt-5 px-6 pb-10">
-      <h1 className="mt-14 font-semibold text-2xl">{`hey, I'm akshit 👋`}</h1>
-      <p className="mt-10 text-sm text-white/80 leading-7">
+    <div className="mt-5 px-6 md:px-0 pb-10 md:max-w-2xl">
+      <h1 className="mt-14 md:mt-10 font-semibold text-2xl">{`hey, I'm akshit 👋`}</h1>
+      <p className="mt-10 text-sm md:text-base md:leading-8 text-white/80 leading-7">
         I&apos;m a full-stack software engineer and a full time code comedian. I
         am currently working as an SDE Intern at
         <ImageBadge
@@ -101,23 +105,25 @@ const Home = () => {
         .
       </p>
 
-      <div className="flex flex-col max-h-[50vh] max-[380px]:max-h-[60vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 ">
+      <div className="flex flex-col max-h-[50vh] md:max-h-[70vh] max-[380px]:max-h-[60vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
         {masonry.map((item) => {
           return (
             <SpotlightCard
               key={item.index}
               mode="after"
               from="rgba(255,255,255,0.20)"
-              size={400}
+              size={500}
               className={clsx(
-                `group h-fit w-40 rounded-2xl border border-white/10 bg-white/5 p-2`
+                `group h-fit w-40 md:w-[50%] rounded-2xl border border-white/10 bg-white/5 p-2`
               )}
             >
               <div className="relative">
                 <Image
                   className={clsx(
-                    "absolute inset-0 scale-110 rounded-xl object-cover blur-xl grayscale saturate-200 transition-all duration-300 group-hover:blur-[32px] group-hover:grayscale-0",
-                    item.extra ? "h-52 w-40" : "h-36 w-40 "
+                    "absolute inset-0 scale-110 rounded-xl object-cover blur-xl md:grayscale saturate-200 transition-all duration-300 group-hover:blur-[32px] group-hover:grayscale-0",
+                    item.extra
+                      ? "h-52 md:h-80 w-40 md:w-full"
+                      : "h-36 md:h-52 w-40 md:w-full"
                   )}
                   src={item.image}
                   alt=""
@@ -125,8 +131,10 @@ const Home = () => {
 
                 <Image
                   className={clsx(
-                    "relative h-36 w-36 rounded-xl object-cover grayscale transition-all duration-300 group-hover:grayscale-0",
-                    item.extra ? "h-52 w-40" : "h-36 w-40 "
+                    "relative h-36 w-36 rounded-xl object-cover md:grayscale transition-all duration-300 group-hover:grayscale-0",
+                    item.extra
+                      ? "h-52 md:h-80 w-40 md:w-full"
+                      : "h-36 md:h-52 w-40 md:w-full"
                   )}
                   src={item.image}
                   alt=""
@@ -137,7 +145,7 @@ const Home = () => {
         })}
       </div>
 
-      <p className="mt-10 text-sm text-white/80 leading-7">
+      <p className="mt-10 text-sm text-white/80 leading-7 md:text-base md:leading-8">
         I create modern web applications using that are so beautiful that they
         make you cry. I ship my apps using the following stack:
       </p>
@@ -150,7 +158,7 @@ const Home = () => {
         })}
       </div>
 
-      <p className="mt-10 text-sm text-white/80 leading-7">
+      <p className="mt-10 text-sm text-white/80 leading-7 md:text-base md:leading-8">
         I have also worked with{" "}
         <Link
           className=" underline underline-offset-4 text-white/90"
