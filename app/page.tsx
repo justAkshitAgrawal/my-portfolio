@@ -1,7 +1,7 @@
 import ImageBadge from "@/components/ImageBadge";
 import SkillBadge from "@/components/SkillBadge";
 import { SpotlightCard } from "@/components/SpotlightCard";
-import akshit from "@/images/akshit.jpg";
+import akshit from "@/images/akshit.jpeg";
 import basketball from "@/images/basketball.avif";
 import harness from "@/images/harness.png";
 import javascript from "@/images/javascript.png";
@@ -86,8 +86,8 @@ const Home = () => {
     <div className="mt-5 px-6 md:px-0 pb-10 md:max-w-2xl">
       <h1 className="mt-14 md:mt-10 font-semibold text-2xl">{`hey, I'm akshit 👋`}</h1>
       <p className="mt-10 text-sm md:text-base md:leading-8 text-white/80 leading-7">
-        I&apos;m a full-stack software engineer and a full time code comedian. I
-        am currently working as an SDE Intern at
+        I&apos;m a full-stack software engineer, developing any web app that
+        crosses my mind. I am currently working as an SDE Intern at
         <ImageBadge
           text="Harness"
           image={harness}
@@ -102,7 +102,7 @@ const Home = () => {
           url="#"
           className="ml-1"
         />
-        .
+        , and working on core integrations.
       </p>
 
       <div className="flex flex-col min-h-fit max-h-[60vh] md:max-h-[90vh] max-[380px]:max-h-[80vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
@@ -147,7 +147,8 @@ const Home = () => {
 
       <p className="mt-10 text-sm text-white/80 leading-7 md:text-base md:leading-8">
         I create modern web applications that are so beautiful that they make
-        you cry. I ship my apps using the following stack:
+        you cry (tears of joy, of course). I ship my apps using the following
+        stack:
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">

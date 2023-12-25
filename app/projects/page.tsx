@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
-import { SiReddit } from "react-icons/si";
+import { SiReddit, SiX } from "react-icons/si";
 import { TbBrandLinktree } from "react-icons/tb";
 import { MdElectricBike } from "react-icons/md";
 import { AiTwotoneShop } from "react-icons/ai";
@@ -13,6 +13,12 @@ export const metadata: Metadata = {
 
 const ProjectsPage = () => {
   const projects = [
+    {
+      name: "Tweeter",
+      link: "https://tweeter-flax.vercel.app/",
+      icon: <SiX className="h-8 w-8 text-white rounded-full" />,
+      skills: ["React", "Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
+    },
     {
       name: "Reddit Clone",
       link: "https://reddit-clone-theta-eight.vercel.app/",
