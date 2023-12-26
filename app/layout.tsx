@@ -10,6 +10,13 @@ const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Akshit Agrawal ",
   description: "Software Engineer | Full Stack Developer",
+  metadataBase: new URL("https://akshitagrawal.dev"),
+  openGraph: {
+    images: "./opengraph-image.png",
+  },
+  twitter: {
+    images: "./twitter-image.png",
+  },
 };
 
 export default function RootLayout({

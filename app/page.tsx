@@ -15,6 +15,7 @@ import Link from "next/link";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiPrisma, SiTailwindcss } from "react-icons/si";
+import { Meteors } from "@/components/meteors";
 
 const Home = () => {
   const masonry = [
@@ -83,8 +84,9 @@ const Home = () => {
   ];
 
   return (
-    <div className="mt-5 px-6 md:px-0 pb-10 md:max-w-2xl">
+    <div className="mt-5 px-6 md:px-0 pb-10 md:max-w-2xl relative">
       <h1 className="mt-14 md:mt-10 font-semibold text-2xl">{`hey, I'm akshit 👋`}</h1>
+      <Meteors className="max-md:hidden" number={15} />
       <p className="mt-10 text-sm md:text-base md:leading-8 text-white/80 leading-7">
         I&apos;m a full-stack software engineer, developing any web app that
         crosses my mind. I am currently working as an SDE Intern at
@@ -117,10 +119,10 @@ const Home = () => {
                 `group h-fit w-40 md:w-[50%] rounded-2xl border border-white/10 bg-white/5 p-2`
               )}
             >
-              <div className="relative">
+              <div className="relative glow:text-glow/50">
                 <Image
                   className={clsx(
-                    "absolute inset-0 scale-110 rounded-xl object-cover blur-xl md:grayscale saturate-200 transition-all duration-300 group-hover:blur-[32px] group-hover:grayscale-0",
+                    "absolute inset-0 scale-110 rounded-xl object-cover blur-xl md:grayscale  transition-all duration-300 group-hover:blur-[32px] group-hover:grayscale-0",
                     item.extra
                       ? "h-52 md:h-80 w-40 md:w-full"
                       : "h-36 md:h-52 w-40 md:w-full"
@@ -131,7 +133,7 @@ const Home = () => {
 
                 <Image
                   className={clsx(
-                    "relative h-36 w-36 rounded-xl object-cover md:grayscale transition-all duration-300 group-hover:grayscale-0",
+                    "relative h-36 w-36 rounded-xl object-cover  transition-all duration-300 group-hover:grayscale-0",
                     item.extra
                       ? "h-52 md:h-80 w-40 md:w-full"
                       : "h-36 md:h-52 w-40 md:w-full"
