@@ -89,24 +89,27 @@ const Home = () => {
       <Meteors className="max-md:hidden" number={15} />
       <p className="mt-10 text-sm md:text-base md:leading-8 text-white/80 leading-7">
         I&apos;m a full-stack software engineer, developing any web app that
-        crosses my mind. I am currently working as an SDE Intern at
-        <ImageBadge
-          text="Harness"
-          image={harness}
-          url="https://harness.io/"
-          className="ml-2"
-        />
-        , where I am working in the Eco-System team, developing plugins for
-        CI/CD integrations with{" "}
-        <ImageBadge
+        crosses my mind. I am currently working as an SDE Intern{" "}
+        <span className="inline-flex w-fit items-center">
+          at
+          <ImageBadge
+            text="Harness"
+            image={harness}
+            url="https://harness.io/"
+            className="ml-2 mr-2"
+          />
+          where
+        </span>
+        {` `}I am working in the Eco-System team, developing plugins for CI/CD
+        integrations
+        {/* <ImageBadge
           text="JavaScipt"
           image={javascript}
           url="#"
           className="ml-1"
-        />
-        , and working on core integrations.
-      </p>
-
+        /> */}
+        {` `}and working on core integrations.
+      </p>{" "}
       <div className="flex flex-col min-h-fit max-h-[60vh] md:max-h-[90vh] max-[380px]:max-h-[80vh] max-[380px]:gap-x-2 items-center flex-wrap mt-8 gap-y-2 md:gap-2 md:mr-10">
         {masonry.map((item) => {
           return (
@@ -146,13 +149,11 @@ const Home = () => {
           );
         })}
       </div>
-
       <p className="mt-10 text-sm text-white/80 leading-7 md:text-base md:leading-8">
         I create modern web applications that are so beautiful that they make
         you cry (tears of joy, of course). I ship my apps using the following
         stack:
       </p>
-
       <div className="mt-4 flex flex-wrap gap-2">
         {skills.map((skill) => {
           return (
@@ -160,7 +161,6 @@ const Home = () => {
           );
         })}
       </div>
-
       <p className="mt-10 text-sm text-white/80 leading-7 md:text-base md:leading-8">
         I have also worked with{" "}
         <Link
@@ -180,7 +180,6 @@ const Home = () => {
         </Link>{" "}
         and a few other startups in the past.
       </p>
-
       <div className="mt-8 flex flex-col gap-4">
         {socials.map((social) => {
           return <SocialLink key={social.name} {...social} />;

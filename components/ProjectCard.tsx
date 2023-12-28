@@ -2,52 +2,47 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { SpotlightCard } from "./SpotlightCard";
 import { GoArrowUpRight } from "react-icons/go";
+import { CardBody, CardContainer, CardItem } from "./3d-card";
+import Image, { StaticImageData } from "next/image";
 
 interface ProjectCardProps {
   project: {
     name: string;
     link: string;
-    icon: ReactNode;
+    imageSrc: StaticImageData;
     skills: string[];
   };
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <Link
-      target="_blank"
-      href={project.link}
-      className="flex items-center md:hover:scale-[1.02] transition-all"
-    >
-      <SpotlightCard
-        from="#1cd1c6"
-        //  @ts-ignore
-        via="#407cff"
-        size={300}
-        className="relative mx-auto w-full max-w-2xl rounded-[--radius] bg-white/10 p-4 md:p-8 [--radius:theme(borderRadius.2xl)] border border-zinc-600"
-      >
-        <div className="absolute inset-px rounded-[calc(var(--radius)-1px)] bg-zinc-800"></div>
-
-        <div className="relative">
-          <div className="font-display text-lg font-semibold text-white md:text-2xl flex items-center  justify-between">
-            <div className="flex items-center gap-3">
-              <div className="rounded-full p-2 bg-zinc-600">{project.icon}</div>
-              <p>{project.name}</p>
-            </div>
-            <GoArrowUpRight className="text-white h-5 w-5" />
-          </div>
-          <p className=" flex flex-wrap text-white/60 mt-4">
-            {project.skills.map((skill, index) => {
-              return (
-                <span key={skill} className="mr-1 text-sm">
-                  {skill}
-                  {index !== project.skills.length - 1 && ","}
-                </span>
-              );
-            })}
-          </p>
-        </div>
-      </SpotlightCard>
+    <Link target="_blank" href={project.link}>
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto  h-auto rounded-xl p-6 border  ">
+          <CardItem
+            translateZ="50"
+            className="text-xl font-bold text-neutral-600 dark:text-white"
+          >
+            {project.name}
+          </CardItem>
+          <CardItem
+            as="p"
+            translateZ="60"
+            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+          >
+            {project.skills.join(", ")}
+          </CardItem>
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src={project.imageSrc}
+              height="1000"
+              width="1000"
+              className="h-80 w-full object-contain rounded-xl group-hover/card:shadow-xl"
+              alt="thumbnail"
+            />
+          </CardItem>
+        </CardBody>
+      </CardContainer>
     </Link>
   );
 };
