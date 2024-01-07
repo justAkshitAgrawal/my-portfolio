@@ -98,10 +98,9 @@ const Home = () => {
             url="https://harness.io/"
             className="ml-2 mr-2"
           />
-          where
+          in
         </span>
-        {` `}I am working in the Eco-System team, developing plugins for CI/CD
-        integrations
+        {` `}the Eco-System team, developing plugins for CI/CD integrations
         {/* <ImageBadge
           text="JavaScipt"
           image={javascript}
