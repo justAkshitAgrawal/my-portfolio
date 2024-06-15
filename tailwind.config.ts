@@ -15,6 +15,7 @@ const config: Config = {
       },
       animation: {
         "meteor-effect": "meteor 8s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
         meteor: {
@@ -26,6 +27,11 @@ const config: Config = {
             transform: "rotate(215deg) translateX(-500px)",
             // @ts-ignore
             opacity: 0,
+          },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
           },
         },
       },

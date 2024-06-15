@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -8,11 +10,16 @@ interface SocialLinkProps {
 
 const SocialLink = ({ name, url }: SocialLinkProps) => {
   return (
-    <Link href={url} target="_blank" className="flex gap-1 items-end w-fit">
+    <Link
+      href={url}
+      target="_blank"
+      className="flex gap-2 items-end w-fit group"
+    >
       <GoArrowUpRight className="text-white h-5 w-5" />
-      <p className="hover:underline underline-offset-4 transition-all">
-        {name}
-      </p>
+      <div className=" inline-block">
+        <p>{name}</p>
+        <div className="bg-amber-500 h-[1px] w-0 group-hover:w-full transition-all duration-500"></div>
+      </div>
     </Link>
   );
 };

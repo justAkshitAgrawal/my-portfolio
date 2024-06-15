@@ -13,8 +13,8 @@ export default function NavBar() {
       href: "/",
     },
     {
-      label: "projects",
-      href: "/projects",
+      label: "work",
+      href: "/work",
     },
     {
       label: "guestbook",
@@ -53,7 +53,7 @@ export default function NavBar() {
               }}
               className={clsx(
                 { hidden: !ready },
-                "absolute inset-y-0 left-0 h-full w-[--size] translate-x-[--position] rounded-lg bg-white/10 transition-[width,transform] duration-[--duration]"
+                "absolute inset-y-0 left-0 h-full w-[--size] translate-x-[--position] rounded-lg bg-white/10 transition-[width,transform] duration-[--duration]",
               )}
             />
 
@@ -85,7 +85,7 @@ export default function NavBar() {
                         pathname == item.href
                           ? "text-white"
                           : "text-white/60 hover:text-white",
-                        "inline-block px-3 md:px-4 py-1 text-sm transition"
+                        "inline-block px-3 md:px-4 py-1 text-sm transition",
                       )}
                     >
                       {item.label}
