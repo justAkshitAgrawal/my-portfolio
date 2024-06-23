@@ -1,6 +1,6 @@
 import ImageBadge from "@/components/ImageBadge";
 import SkillBadge from "@/components/SkillBadge";
-import akshit from "@/images/akshit.jpeg";
+import akshit from "@/images/akshit.jpg";
 import basketball from "@/images/basketball.avif";
 import harness from "@/images/harness.png";
 import setup from "@/images/setup.jpg";
